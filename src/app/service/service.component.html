@@ -1,0 +1,53 @@
+
+<div class="card">
+    <span class="title">Employee Submit Form</span>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="group">
+        <input placeholder="" type="text" formControlName="name" required="">
+        <label for="name"> Employee Name</label>
+      </div>
+      <div class="group">
+        <input placeholder="" type="email" formControlName="mail" required="">
+        <label for="email">Email</label>
+      </div>
+      <div class="group">
+        <input placeholder="" type="password" formControlName="password" required="">
+        <label for="password">Password</label>
+      </div>
+      <div class="group">
+        <input placeholder="" type="number" formControlName="salary" required="">
+        <label for="salary">Salary</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="table-container">
+  <table>
+  <thead>
+    <tr>
+        <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Salary</th>
+      <th>createdAt</th>
+      <th>updatedAt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.mail }}</td>
+      <td>{{employee.Password}}</td>
+      <td>{{ employee.salary }}</td>
+      <td>{{ employee.createdAt }}</td>
+      <td>{{ employee.updatedAt }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  
+
+  
